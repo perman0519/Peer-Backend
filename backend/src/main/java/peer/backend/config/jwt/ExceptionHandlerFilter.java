@@ -21,7 +21,7 @@ public class ExceptionHandlerFilter extends OncePerRequestFilter {
         } catch (JwtException e) {
             //logout
             setErrorResponse(HttpStatus.UNAUTHORIZED, request, response, e);
-        }catch (Exception e) {
+        } catch (Exception e) {
             setErrorResponse(HttpStatus.UNAUTHORIZED, request, response, e);
         }
     }
